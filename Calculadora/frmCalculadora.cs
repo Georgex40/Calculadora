@@ -12,11 +12,21 @@ namespace Calculadora
             try
             {
 
-                int a = 0, b = 0, resultado;
+                int a = 0, b = 0, resultado=0;
                 a = int.Parse(txtVariableA.Text);
                 b = Convert.ToInt32(txtVariableB.Text);
 
-                resultado = a + b;
+                if (rbdSuma.Checked)
+                
+                    resultado = a + b;
+                
+                if (rbdResta.Checked)
+                    resultado = a - b;
+                if (rbdMultiplicacion.Checked)
+                    resultado = a * b;
+                if (rbdDivision.Checked)
+                    resultado = a / b;
+               
                 MessageBox.Show("El Resultado es: " + resultado.ToString(),
                     "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Reset();

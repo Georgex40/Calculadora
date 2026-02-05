@@ -35,6 +35,7 @@
             calculadoraSimpleToolStripMenuItem = new ToolStripMenuItem();
             ordenamientosToolStripMenuItem = new ToolStripMenuItem();
             burbujaToolStripMenuItem = new ToolStripMenuItem();
+            registrosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -85,9 +86,16 @@
             // burbujaToolStripMenuItem
             // 
             burbujaToolStripMenuItem.Name = "burbujaToolStripMenuItem";
-            burbujaToolStripMenuItem.Size = new Size(180, 22);
+            burbujaToolStripMenuItem.Size = new Size(115, 22);
             burbujaToolStripMenuItem.Text = "Burbuja";
             burbujaToolStripMenuItem.Click += burbujaToolStripMenuItem_Click;
+            // 
+            // registrosToolStripMenuItem
+            // 
+            registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
+            registrosToolStripMenuItem.Size = new Size(180, 22);
+            registrosToolStripMenuItem.Text = "Registros";
+            registrosToolStripMenuItem.Click += registrosToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -113,5 +121,6 @@
         private ToolStripMenuItem calculadoraSimpleToolStripMenuItem;
         private ToolStripMenuItem ordenamientosToolStripMenuItem;
         private ToolStripMenuItem burbujaToolStripMenuItem;
+        private ToolStripMenuItem registrosToolStripMenuItem;
     }
 }

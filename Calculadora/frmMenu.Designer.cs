@@ -36,6 +36,8 @@
             ordenamientosToolStripMenuItem = new ToolStripMenuItem();
             burbujaToolStripMenuItem = new ToolStripMenuItem();
             registrosToolStripMenuItem = new ToolStripMenuItem();
+            temporiToolStripMenuItem = new ToolStripMenuItem();
+            relojToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { calculadoraSimpleToolStripMenuItem, ordenamientosToolStripMenuItem, registrosToolStripMenuItem, temporiToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -97,6 +99,20 @@
             registrosToolStripMenuItem.Text = "Registros";
             registrosToolStripMenuItem.Click += registrosToolStripMenuItem_Click;
             // 
+            // temporiToolStripMenuItem
+            // 
+            temporiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { relojToolStripMenuItem });
+            temporiToolStripMenuItem.Name = "temporiToolStripMenuItem";
+            temporiToolStripMenuItem.Size = new Size(180, 22);
+            temporiToolStripMenuItem.Text = "Temporizadores";
+            // 
+            // relojToolStripMenuItem
+            // 
+            relojToolStripMenuItem.Name = "relojToolStripMenuItem";
+            relojToolStripMenuItem.Size = new Size(180, 22);
+            relojToolStripMenuItem.Text = "Reloj";
+            relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -122,5 +138,7 @@
         private ToolStripMenuItem ordenamientosToolStripMenuItem;
         private ToolStripMenuItem burbujaToolStripMenuItem;
         private ToolStripMenuItem registrosToolStripMenuItem;
+        private ToolStripMenuItem temporiToolStripMenuItem;
+        private ToolStripMenuItem relojToolStripMenuItem;
     }
 }

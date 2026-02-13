@@ -13,7 +13,7 @@ namespace Calculadora.Formularios
     {
         bool saved = false;
         string path = "";
-      
+
         string texto = "";
         public frmEditor()
         {
@@ -80,9 +80,9 @@ namespace Calculadora.Formularios
 
         private void rtbEditor_TextChanged(object sender, EventArgs e)
         {
-        texto = rtbEditor.Text;
+            texto = rtbEditor.Text;
             string[] palabras = texto.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
-     
+
 
             tssStatus.Text = palabras.Length.ToString() + " Palabras";
         }
@@ -91,10 +91,26 @@ namespace Calculadora.Formularios
         {
             string[] palabras = texto.Split(new char[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries);
             string[] parrafos = texto.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            MessageBox.Show("Estadisticas:\n\nPalabras: " + tssStatus.Text + 
-                "\nLetras: "+ texto.Length.ToString()+
-                "\nParrafos: "+
+            MessageBox.Show("Estadisticas:\n\nPalabras: " + tssStatus.Text +
+                "\nLetras: " + texto.Length.ToString() +
+                "\nParrafos: " +
                 parrafos.Length.ToString(), "Contador de Palabras");
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ftdEditor.ShowDialog() == DialogResult.OK)
+            {
+                rtbEditor.Font = ftdEditor.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (cldEditor.ShowDialog() == DialogResult.OK)
+            {
+                rtbEditor.ForeColor = cldEditor.Color;
+            }
         }
     }
 }

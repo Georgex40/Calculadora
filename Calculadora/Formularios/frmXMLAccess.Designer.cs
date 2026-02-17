@@ -50,6 +50,7 @@
             dgvPersonas.Name = "dgvPersonas";
             dgvPersonas.Size = new Size(694, 320);
             dgvPersonas.TabIndex = 0;
+            dgvPersonas.CellContentClick += dgvPersonas_CellContentClick;
             // 
             // id
             // 
